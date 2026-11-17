@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quick Note Application</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📝 Quick Note</h1>
+            <p>Your personal note manager</p>
+        </header>
+
+        <main>
+
+            <section class="note-editor">
+                <h2>New Note</h2>
+
+                <textarea
+                    id="noteInput"
+                    placeholder="Write your note here..."
+                ></textarea>
+
+                <button id="saveBtn" onclick="saveNote()">
+                    💾 Save Note
+                </button>
+            </section>
+
+            <section class="saved-notes">
+                <h2>Your Saved Notes</h2>
+
+                <div id="notesList">
+                    Loading notes...
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Quick Note Application | Built with Python & Flask</p>
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
